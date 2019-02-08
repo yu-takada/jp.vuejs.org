@@ -15,20 +15,20 @@ Vue は現在の [Web Components spec draft](https://github.com/w3c/webcomponent
 これを使うことで次のようなコンポーネントを作成することが出来ます:
 
 ``` html
-<navigation-link url="/profile">
-  Your Profile
-</navigation-link>
-```
-
-そして、 `<navigation-link>` のテンプレートはこうなります:
-
-``` html
 <a
   v-bind:href="url"
   class="nav-link"
 >
   <slot></slot>
 </a>
+```
+
+そして、 `<navigation-link>` のテンプレートはこうなります:
+
+``` html
+<navigation-link url="/profile">
+  Your Profile
+</navigation-link>
 ```
 
 コンポーネントを描画する時、 `<slot>` 要素は「Your Profile」に置換されるでしょう。スロットには HTML を含む任意のテンプレートを入れることが出来ます:
